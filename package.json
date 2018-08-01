@@ -1,0 +1,23 @@
+{
+  "name": "koa-practice",
+  "version": "1.0.0",
+  "description": "koa practice",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeremy",
+  "license": "ISC",
+  "dependencies": {
+    "busboy": "^0.2.14",
+    "ejs": "^2.6.1",
+    "koa": "^2.5.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.3",
+    "koa-views": "^6.1.4",
+    "superagent": "^3.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
+}
