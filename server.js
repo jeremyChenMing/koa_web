@@ -33,7 +33,7 @@ const handler = async (ctx, next) => {
   if (ctx.request.method == "OPTIONS") {
     ctx.response.status = 200
   }
-  console.log(`Process ${ctx.request.method} ${ctx.request.url}`);
+  console.log(`path Process ${ctx.request.method} ${ctx.request.url}`);
   try {
     await next();
     console.log('handler通过')

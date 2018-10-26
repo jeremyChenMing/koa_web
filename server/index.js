@@ -33,14 +33,12 @@ function addControllers(router, dir) {
     return f !== 'index.js';
   })
   files.forEach((f) => {
-    // console.log(`process controller: ${f}...`);
     let mapping = require(__dirname + '/' + f);
     addMapping(router, mapping);
   });
 }
 
 module.exports = function(dir) {
-  console.log(dir, '@@@')
   let controllers_dir = dir || '/',
     router = require('koa-router')();
   addControllers(router, controllers_dir);

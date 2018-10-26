@@ -25,12 +25,13 @@ const fn_usrs = async (ctx, next) => {
 }
 const fn_usrs_new = async (ctx, next) => {
   const header = ctx.request.header;
+  console.log(header)
   var res = await request
-                    .get('http://fesco.d.upvi.com/api/auth/v1/closing-accounts')
+                    .get('https://www.51bricks.com/api/v1/users')
                     .set('Accept', header['accept'])
-                    .set('Content-Type', header['content-type'])
-                    .set('Authorization', header['authorization'])
-  console.log(res.body)
+                    // .set('Content-Type', header['content-type'])
+                    // .set('Authorization', header['authorization'])
+  // console.log(res.body)
   
   ctx.response.body = res.body; //proxy 代理的方式
 
@@ -58,11 +59,10 @@ const del_usrs = async (ctx, next) => {
   //   ctx.response.body = {}
   // })
   await fs.writeFile(`${current}/data/index.json`,t, function (err) {
-    console.log(err, '9-0')
+    // console.log(err, '9-0')
     next()
     ctx.response.body = {}
   })
-  
 }
 
 
