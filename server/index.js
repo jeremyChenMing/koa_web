@@ -40,6 +40,7 @@ function addControllers(router, dir) {
 }
 
 module.exports = function(dir) {
+  console.log(dir, '@@@')
   let controllers_dir = dir || '/',
     router = require('koa-router')();
   addControllers(router, controllers_dir);
